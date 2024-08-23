@@ -3,7 +3,7 @@ import os
 import csv
 
 # Set path for CSV
-csvpath = os.path.join('..', 'python-challenge/PyBank/Resources', 'budget_data.csv')
+csvpath = os.path.join('Resources', 'budget_data.csv')
 
 # Set initial variables
 unique_months = set()
@@ -31,7 +31,6 @@ with open(csvpath, 'r') as csvfile:
         profit_loss = int(row[1])
         profit_added += profit_loss
 
-
         # Use conditional to find greatest increase and decrease amounts
         if profit_loss > profit_amt:
             profit_amt = profit_loss
@@ -57,3 +56,12 @@ print(f"Total: ${total_profit}")
 print(f"Average Change: ${avg_change}")
 print(f"Greatest Increase in Profits: {greatest_date} (${profit_amt})")
 print(f"Greatest Decrease in Profits: {least_date} (${loss_amt})")
+
+with open("analysis/analysis.txt", "w") as file:
+    file.write("Financial Analysis")
+#                "----------------------------"
+#                "Total Months:" + (total_months)
+#                "Total: $" + (total_profit)
+#                "Average Change: $"(avg_change)
+# print(f"Greatest Increase in Profits: {greatest_date} (${profit_amt})")
+# print(f"Greatest Decrease in Profits: {least_date} (${loss_amt})")
