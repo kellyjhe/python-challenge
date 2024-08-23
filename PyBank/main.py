@@ -58,10 +58,10 @@ print(f"Greatest Increase in Profits: {greatest_date} (${profit_amt})")
 print(f"Greatest Decrease in Profits: {least_date} (${loss_amt})")
 
 with open("analysis/analysis.txt", "w") as file:
-    file.write("Financial Analysis")
-#                "----------------------------"
-#                "Total Months:" + (total_months)
-#                "Total: $" + (total_profit)
-#                "Average Change: $"(avg_change)
-# print(f"Greatest Increase in Profits: {greatest_date} (${profit_amt})")
-# print(f"Greatest Decrease in Profits: {least_date} (${loss_amt})")
+    file.write("Financial Analysis\n" +
+               "----------------------------\n" +
+               "Total Months: " + str(total_months) + "\n" +
+               "Total: $" + str(total_profit) + "\n" +
+               "Average Change: $" + str(avg_change) + "\n" +
+               "Greatest Increase in Profits: " + str(greatest_date) + " ($" + str(profit_amt) + ")" + "\n" +
+               "Greatest Decrease in Profits: " + str(least_date) + " ($" + str(loss_amt) + ")")
