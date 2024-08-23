@@ -48,7 +48,7 @@ total_profit = round(profit_added, 1)
 # Calculate average change
 avg_change = round((profit_added / total_months), 2)
 
-# Print
+# Print in Terminal
 print("Financial Analysis")
 print("----------------------------")
 print(f"Total Months: {total_months}")
@@ -57,6 +57,7 @@ print(f"Average Change: ${avg_change}")
 print(f"Greatest Increase in Profits: {greatest_date} (${profit_amt})")
 print(f"Greatest Decrease in Profits: {least_date} (${loss_amt})")
 
+# Print in text file
 with open("analysis/analysis.txt", "w") as file:
     file.write("Financial Analysis\n" +
                "----------------------------\n" +
