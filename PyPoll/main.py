@@ -82,8 +82,8 @@ with open("analysis/analysis.txt", "w") as file:
                 "Total Votes: " + str(total_votes) + "\n" +
                 "-------------------------" + "\n" +
                 str(names[0]) + ": " + str(candidate1_percentage) + "% (" + str(candidate1_votes) + ")" + "\n" +
-                str(names[1]) + ": " + str(candidate2_percentage) + "% (" + str(candidate1_votes) + ")" + "\n" +
-                str(names[2]) + ": " + str(candidate3_percentage) + "% (" + str(candidate1_votes) + ")" + "\n" +
+                str(names[1]) + ": " + str(candidate2_percentage) + "% (" + str(candidate2_votes) + ")" + "\n" +
+                str(names[2]) + ": " + str(candidate3_percentage) + "% (" + str(candidate3_votes) + ")" + "\n" +
                 "-------------------------" + "\n" +
                 "Winner: " + str(winner[0]) + "\n" +
                 "-------------------------" + "\n")
