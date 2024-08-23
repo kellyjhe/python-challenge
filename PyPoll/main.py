@@ -3,7 +3,7 @@ import os
 import csv
 
 # Set file path
-csvpath = os.path.join('..', 'python-challenge/PyPoll/Resources', 'election_data.csv')
+csvpath = os.path.join('Resources', 'election_data.csv')
 
 # Set variables
 unique_votes = set()
@@ -63,7 +63,7 @@ candidate1_percentage = round(((candidate1_votes / total_votes) * 100), 3)
 candidate2_percentage = round(((candidate2_votes / total_votes) * 100), 3)
 candidate3_percentage = round(((candidate3_votes / total_votes) * 100), 3)
 
-# Print
+# Print in Terminal
 print("Election Results")
 print("-------------------------")
 print(f"Total Votes: {total_votes}")
@@ -74,3 +74,16 @@ print(f"{names[2]}: {candidate3_percentage}% ({candidate3_votes})")
 print("-------------------------")
 print(f"Winner: {winner[0]}")
 print("-------------------------")
+
+# Print in text file
+with open("analysis/analysis.txt", "w") as file:
+     file.write("Election Results\n" +
+                "-------------------------" + "\n" +
+                "Total Votes: " + str(total_votes) + "\n" +
+                "-------------------------" + "\n" +
+                str(names[0]) + ": " + str(candidate1_percentage) + "% (" + str(candidate1_votes) + ")" + "\n" +
+                str(names[1]) + ": " + str(candidate2_percentage) + "% (" + str(candidate1_votes) + ")" + "\n" +
+                str(names[2]) + ": " + str(candidate3_percentage) + "% (" + str(candidate1_votes) + ")" + "\n" +
+                "-------------------------" + "\n" +
+                "Winner: " + str(winner[0]) + "\n" +
+                "-------------------------" + "\n")
