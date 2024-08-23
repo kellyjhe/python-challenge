@@ -58,6 +58,7 @@ print(f"Greatest Increase in Profits: {greatest_date} (${profit_amt})")
 print(f"Greatest Decrease in Profits: {least_date} (${loss_amt})")
 
 # Print in text file
+# "analysis/analysis.txt" code from Andrew and file code from Xpert
 with open("analysis/analysis.txt", "w") as file:
     file.write("Financial Analysis\n" +
                "----------------------------\n" +
